@@ -12,7 +12,7 @@ spring:
       force: true
 
 server:
-  port: 10041
+  port: 10044
   servlet:
     context-path: /api41
   tomcat:

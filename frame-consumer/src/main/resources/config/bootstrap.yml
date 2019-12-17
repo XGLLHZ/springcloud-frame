@@ -2,14 +2,11 @@
 
 spring:
   cloud:
-    discovery:
-      enabled: true
-      client:
-        simple:
-          local:
-            service-id: frame-config
     config:
+      uri: http://localhost:8083/api
       name: frame-consumer-config
       label: master
+      discovery:
+        enabled: true
 
 

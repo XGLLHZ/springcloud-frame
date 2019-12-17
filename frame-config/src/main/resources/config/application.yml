@@ -13,7 +13,7 @@ spring:
       server:
         git:
           uri: https://github.com/XGLLHZ/springcloud-frame.git
-          search-paths: /frame-config/config
+          search-paths: frame-config/config
           username: XGLLHZ
           password: GHghpp19961003
         default-label: master

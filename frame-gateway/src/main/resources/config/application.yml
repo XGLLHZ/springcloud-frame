@@ -13,10 +13,10 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: api41
-          uri: http://localhost:10041
+        - id: api42
+          uri: http://localhost:10042
           predicates:
-            - Path=/api41/consume/test/hello
+            - Path=/api42/consumes/test/hello
 
 server:
   port: 8082
