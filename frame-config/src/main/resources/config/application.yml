@@ -14,7 +14,7 @@ spring:
     config:
       server:
         git:
-          uri:
+          uri: https://github.com/XGLLHZ/springcloud-frame.git
           search-paths:
           username:
           password:
