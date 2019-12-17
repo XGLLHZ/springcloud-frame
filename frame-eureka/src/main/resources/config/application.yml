@@ -1,0 +1,26 @@
+# eureka 配置
+
+spring:
+  application:
+    name: frame-eureka
+  profiles:
+    active: dev
+  http:
+    encoding:
+      enabled: true
+      charset: utf-8
+      force: true
+
+server:
+  port: 8081
+
+eureka:
+  instance:
+    hostname: frame-eureka   # 主机名
+  client:
+    register-with-eureka: false   # 是否将自身注册到 eureka 注册中心
+    fetch-registry: false   # 是否要从 eureka 注册中心获取注册信息
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/   # eureka 注册中心注册地址
+
+

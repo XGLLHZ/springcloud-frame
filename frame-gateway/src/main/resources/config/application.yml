@@ -1,0 +1,38 @@
+# gateway 配置
+
+spring:
+  application:
+    name: frame-gateway
+  profiles:
+    active: dev
+  http:
+    encoding:
+      enabled: true
+      charset: utf-8
+      force: true
+  cloud:
+    gateway:
+      routes:
+        - id: api41
+          uri: http://localhost:10041
+          predicates:
+            - Path=/api41/consume/test/hello
+        - id: api42
+          uri: http://localhost:10042
+          predicates:
+            - Path=/api42/consumes/test/hello
+
+server:
+  port: 8082
+  tomcat:
+    connection-timeout: 5000
+
+eureka:
+  instance:
+    hostname: localhost
+  server:
+    enable-self-preservation: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+

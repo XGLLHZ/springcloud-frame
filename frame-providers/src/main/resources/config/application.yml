@@ -1,0 +1,27 @@
+# providers 配置
+
+spring:
+  application:
+    name: frame-providers
+  http:
+    encoding:
+      enabled: true
+      charset: utf-8
+      force: true
+
+server:
+  port: 10032
+  servlet:
+    context-path: /api32
+  tomcat:
+    connection-timeout: 5000
+
+eureka:
+  instance:
+    hostname: localhost
+  server:
+    enable-self-preservation: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+
