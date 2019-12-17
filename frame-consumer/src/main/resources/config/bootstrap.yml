@@ -1,0 +1,15 @@
+# consumer 配置 git 配置
+
+spring:
+  cloud:
+    discovery:
+      enabled: true
+      client:
+        simple:
+          local:
+            service-id: frame-config
+    config:
+      name: frame-consumer-config
+      label: master
+
+

@@ -3,8 +3,6 @@
 spring:
   application:
     name: frame-config
-  profiles:
-    active: dev
   http:
     encoding:
       enabled: true
@@ -15,9 +13,9 @@ spring:
       server:
         git:
           uri: https://github.com/XGLLHZ/springcloud-frame.git
-          search-paths:
-          username:
-          password:
+          search-paths: /frame-config/config
+          username: XGLLHZ
+          password: GHghpp19961003
         default-label: master
 
 server:

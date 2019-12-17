@@ -1,8 +1,8 @@
-# gateway 配置
+# frame-consumer 配置
 
 spring:
   application:
-    name: frame-gateway
+    name: frame-consumer
   profiles:
     active: dev
   http:
@@ -10,16 +10,11 @@ spring:
       enabled: true
       charset: utf-8
       force: true
-  cloud:
-    gateway:
-      routes:
-        - id: api41
-          uri: http://localhost:10041
-          predicates:
-            - Path=/api41/consume/test/hello
 
 server:
-  port: 8082
+  port: 10041
+  servlet:
+    context-path: /api41
   tomcat:
     connection-timeout: 5000
 
@@ -31,4 +26,9 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8081/eureka/
+
+feign:
+  hystrix:
+    enabled: true
+
 
