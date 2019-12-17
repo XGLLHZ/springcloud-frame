@@ -1,10 +1,8 @@
-# consumers 配置
+# frame-providers 配置
 
 spring:
   application:
-    name: frame-consumers
-  profiles:
-    active: dev
+    name: frame-providers
   http:
     encoding:
       enabled: true
@@ -12,9 +10,9 @@ spring:
       force: true
 
 server:
-  port: 10042
+  port: 10032
   servlet:
-    context-path: /api42
+    context-path: /api32
   tomcat:
     connection-timeout: 5000
 
@@ -27,7 +25,5 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8081/eureka/
 
-feign:
-  hystrix:
-    enabled: true
+
 

@@ -1,8 +1,8 @@
-# provider 配置
+# frame-consumer 配置
 
 spring:
   application:
-    name: frame-provider
+    name: frame-common
   profiles:
     active: dev
   http:
@@ -12,9 +12,9 @@ spring:
       force: true
 
 server:
-  port: 10031
+  port: 8084
   servlet:
-    context-path: /api31
+    context-path: /api
   tomcat:
     connection-timeout: 5000
 
@@ -26,4 +26,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8081/eureka/
+
+feign:
+  hystrix:
+    enabled: true
+
+
+
 

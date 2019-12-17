@@ -1,0 +1,35 @@
+# frame-consumers 配置
+
+spring:
+  application:
+    name: frame-consumers
+  profiles:
+    active: dev
+  http:
+    encoding:
+      enabled: true
+      charset: utf-8
+      force: true
+
+server:
+  port: 10042
+  servlet:
+    context-path: /api42
+  tomcat:
+    connection-timeout: 5000
+
+eureka:
+  instance:
+    hostname: localhost
+  server:
+    enable-self-preservation: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+
+feign:
+  hystrix:
+    enabled: true
+
+
+

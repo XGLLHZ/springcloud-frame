@@ -1,12 +1,14 @@
-# frame-consumer 配置 git 配置
+# frame-common 配置 git 配置
 
 spring:
   cloud:
     config:
       uri: http://localhost:8083/api
-      name: frame-consumer-config
+      name: frame-common-config
       label: master
       discovery:
         enabled: true
+
+
 
 

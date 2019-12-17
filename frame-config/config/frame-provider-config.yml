@@ -1,8 +1,10 @@
-# providers 配置
+# frame-provider 配置
 
 spring:
   application:
-    name: frame-providers
+    name: frame-provider
+  profiles:
+    active: dev
   http:
     encoding:
       enabled: true
@@ -10,9 +12,9 @@ spring:
       force: true
 
 server:
-  port: 10032
+  port: 10031
   servlet:
-    context-path: /api32
+    context-path: /api31
   tomcat:
     connection-timeout: 5000
 
@@ -24,4 +26,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8081/eureka/
+
+
 
